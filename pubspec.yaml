@@ -43,7 +43,20 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
+  assets:
+    - assets/images/
+  fonts:
+    - family: Billabong
+      fonts:
+        - asset: assets/fonts/Billabong.ttf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
+    - family: Aveny
+      fonts:
+        - asset: assets/fonts/AvenyTRegular.otf
+          style: normal
+        - asset: assets/fonts/AvenyTMedium.otf
+          style: italic
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
