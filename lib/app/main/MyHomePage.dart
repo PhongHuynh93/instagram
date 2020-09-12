@@ -53,7 +53,7 @@ class _InstaBody extends StatelessWidget {
           itemCount: 5,
           itemBuilder: (context, index) => index == 0
               ? Container(
-                  height: 48,
+                  height: 76,
                   child: InstaStories(),
                 )
               : InstaList(index)),
