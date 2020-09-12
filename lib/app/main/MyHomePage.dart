@@ -9,9 +9,7 @@ class MyHomePage extends StatelessWidget {
 
       ),
       body: _InstaBody(),
-      bottomNavigationBar: Container(
-
-      ),
+      bottomNavigationBar: _InstaFooter(),
     );
   }
 }
@@ -19,9 +17,29 @@ class MyHomePage extends StatelessWidget {
 class _InstaBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Column(
+    return new Container(
 
     );
   }
-
 }
+
+class _InstaFooter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      child: BottomAppBar(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            IconButton(icon: Icon(Icons.home), onPressed: () {}),
+            IconButton(icon: Icon(Icons.search), onPressed: () {}),
+            IconButton(icon: Icon(Icons.add_box), onPressed: () {}),
+            IconButton(icon: Icon(Icons.favorite), onPressed: () {}),
+            IconButton(icon: Icon(Icons.account_box), onPressed: () {}),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
