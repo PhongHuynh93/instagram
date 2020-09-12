@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'InstaList.dart';
+import 'InstaStories.dart';
+
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,23 +16,11 @@ class MyHomePage extends StatelessWidget {
         ),
         leading: Icon(Icons.camera_alt),
         actions: [
-          Padding(
-              padding: EdgeInsets.only(right: 16),
-              child: Icon(Icons.send)
-          )
+          Padding(padding: EdgeInsets.only(right: 16), child: Icon(Icons.send))
         ],
       ),
       body: _InstaBody(),
       bottomNavigationBar: _InstaFooter(),
-    );
-  }
-}
-
-class _InstaBody extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new Container(
-
     );
   }
 }
@@ -48,6 +39,24 @@ class _InstaFooter extends StatelessWidget {
           IconButton(icon: Icon(Icons.account_box), onPressed: () {}),
         ],
       ),
+    );
+  }
+}
+
+class _InstaBody extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var deviceSize = MediaQuery.of(context).size;
+
+    return new Container(
+      child: ListView.builder(
+          itemCount: 5,
+          itemBuilder: (context, index) => index == 0
+              ? Container(
+                  height: 48,
+                  child: InstaStories(),
+                )
+              : InstaList(index)),
     );
   }
 }
