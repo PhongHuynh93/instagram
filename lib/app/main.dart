@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Instagram Clone',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryIconTheme: IconThemeData(color: Colors.black),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
